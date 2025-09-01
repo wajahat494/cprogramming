@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float km, co2;
+    int mode;
+    printf("Select travel mode:\n1. Car\n2. Bus\n3. Train\n4. Bicycle\nChoice: ");
+    scanf("%d", &mode);
+    printf("Enter distance traveled (km): ");
+    scanf("%f", &km);
+
+    switch(mode) {
+        case 1: co2 = km * 0.21; break;
+        case 2: co2 = km * 0.08; break;
+        case 3: co2 = km * 0.05; break;
+        case 4: co2 = 0; break;
+        default: co2 = 0; printf("Invalid mode!\n");
+    }
+
+    printf("Estimated CO₂ emissions: %.2f kg\n", co2);
+    return 0;
+}
