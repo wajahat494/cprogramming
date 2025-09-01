@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int m_day, m_month, e_day, e_month, today_day, today_month;
+    printf("Enter manufacture date (dd mm): ");
+    scanf("%d %d", &m_day, &m_month);
+    printf("Enter expiry date (dd mm): ");
+    scanf("%d %d", &e_day, &e_month);
+    printf("Enter today date (dd mm): ");
+    scanf("%d %d", &today_day, &today_month);
+
+    if (today_month < e_month || (today_month == e_month && today_day <= e_day))
+        printf("✅ Product is still fresh!\n");
+    else
+        printf("⚠️ Product is expired!\n");
+
+    return 0;
+}
